@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import '../blocs/settings_provider.dart';
 import '../widgets/color_box.dart';
+// import '../resources/settings.dart';
+// import 'package:screen/screen.dart';
+import '../widgets/brightness_slider.dart';
 
 class ColorsSettings extends StatelessWidget {
   Widget build(BuildContext context) {
@@ -17,9 +20,19 @@ class ColorsSettings extends StatelessWidget {
         return Container(
           color: Colors.grey[200],
           padding: EdgeInsets.all(10.0),
-          child: GridView.count(
-            crossAxisCount: 3,
-            children: buildBoxList(snapshot),
+          child: Column(
+            children: [
+              BrightnessSlider(),
+              Container(
+                margin: EdgeInsets.only(top: 10.0),
+              ),
+              Expanded(
+                child: GridView.count(
+                  crossAxisCount: 3,
+                  children: buildBoxList(snapshot),
+                ),
+              ),
+            ],
           ),
         );
       },

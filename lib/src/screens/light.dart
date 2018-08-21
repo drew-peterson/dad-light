@@ -9,21 +9,21 @@ class Light extends StatelessWidget {
     return StreamBuilder(
       stream: bloc.selectedColor,
       builder: (context, snapshot) {
-        print('Light ${snapshot.data}');
         if (!snapshot.hasData) {
-          return Text('loading...');
+          return Container(color: Colors.grey);
         }
         return Container(
           color: globals.colorMap[snapshot.data],
           child: Center(
-            child: RaisedButton(
-              color: Colors.red,
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              child: Text('go back'),
-            ),
-          ),
+              // child: OutlineButton(
+              //   color: globals.colorMap[snapshot.data],
+              //   borderSide: BorderSide(color: Colors.black, width: 1.0),
+              //   onPressed: () {
+              //     bloc.setLightEnabled(false);
+              //   },
+              //   child: Text('BACK'),
+              // ),
+              ),
         );
       },
     );

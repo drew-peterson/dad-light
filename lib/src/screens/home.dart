@@ -5,13 +5,13 @@ import '../app_constants.dart' as globals;
 class Home extends StatelessWidget {
   Widget build(context) {
     final bloc = SettingsProvider.of(context);
-
     return StreamBuilder(
         stream: bloc.selectedColor,
         builder: (colorContext, snapShot) {
           if (!snapShot.hasData) {
             return Text('loading home.....');
           }
+
           return Container(
             alignment: Alignment.center,
             color: globals.colorMap[snapShot.data],
@@ -31,10 +31,15 @@ class Home extends StatelessWidget {
                     fontSize: 20.0,
                   ),
                 ),
-                RaisedButton(
-                  onPressed: () => Navigator.pushNamed(context, '/light'),
-                  child: Text('goto light'),
+                Container(
+                  margin: EdgeInsets.only(top: 10.0),
                 ),
+                Text('Happy Birthday Dad - 2018'),
+                // OutlineButton(
+                //   onPressed: () => bloc.setLightEnabled(true),
+                //   child: Text('ON'),
+                //   borderSide: BorderSide(color: Colors.black, width: 1.0),
+                // ),
               ],
             ),
           );

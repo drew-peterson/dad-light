@@ -1,5 +1,9 @@
 PODS:
   - Flutter (1.0.0)
+  - proximity_plugin (0.0.1):
+    - Flutter
+  - screen (0.0.1):
+    - Flutter
   - sensors (0.0.1):
     - Flutter
   - shared_preferences (0.0.1):
@@ -7,12 +11,18 @@ PODS:
 
 DEPENDENCIES:
   - Flutter (from `.symlinks/flutter/ios`)
+  - proximity_plugin (from `.symlinks/plugins/proximity_plugin/ios`)
+  - screen (from `.symlinks/plugins/screen/ios`)
   - sensors (from `.symlinks/plugins/sensors/ios`)
   - shared_preferences (from `.symlinks/plugins/shared_preferences/ios`)
 
 EXTERNAL SOURCES:
   Flutter:
     :path: ".symlinks/flutter/ios"
+  proximity_plugin:
+    :path: ".symlinks/plugins/proximity_plugin/ios"
+  screen:
+    :path: ".symlinks/plugins/screen/ios"
   sensors:
     :path: ".symlinks/plugins/sensors/ios"
   shared_preferences:
@@ -20,6 +30,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Flutter: 9d0fac939486c9aba2809b7982dfdbb47a7b0296
+  proximity_plugin: 9b49095acd39788cd9b7138ba979a48feb50a9f4
+  screen: 9ab0df4ff4bb6d382da4328428535b618c705c46
   sensors: 5e1d451d2b563766999e768342efed82d6141fcc
   shared_preferences: 5a1d487c427ee18fcd3ea1f2a131569481834b53
 

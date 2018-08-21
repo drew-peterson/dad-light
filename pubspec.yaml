@@ -11,6 +11,8 @@ dependencies:
   sensors: ^0.3.4
   shared_preferences: ^0.4.2
   rxdart: ^0.18.0
+  proximity_plugin: ^1.0.0
+  screen: ^0.0.3
 
 dev_dependencies:
   flutter_test:
