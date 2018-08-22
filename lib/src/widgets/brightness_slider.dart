@@ -12,16 +12,18 @@ class BrightnessSlider extends StatelessWidget {
           return Text('loading...');
         }
         return Container(
-          child: Column(children: [
-            Text('Brightness: ${snapshot.data.toStringAsFixed(2)}'),
-            Slider(
-              min: 0.0,
-              max: 1.0,
-              value: snapshot.data,
-              onChanged: (double value) =>
-                  appSettings.setBrightness(value, context),
-            ),
-          ]),
+          child: Column(
+            children: [
+              Text('Brightness: ${snapshot.data.toStringAsFixed(2)}'),
+              Slider(
+                min: 0.0,
+                max: 1.0,
+                value: snapshot.data,
+                onChangeEnd: (double value) => appSettings.setBrightness(value),
+                onChanged: (double value) => bloc.setBrightness(value),
+              ),
+            ],
+          ),
         );
       },
     );

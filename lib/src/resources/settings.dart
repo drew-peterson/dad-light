@@ -29,11 +29,9 @@ class Settings {
     prefs.setString(_color, color);
   }
 
-  Future setBrightness(double value, context) async {
+  Future setBrightness(double value) async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
-    final bloc = SettingsProvider.of(context);
     prefs.setDouble(_brightness, value);
-    bloc.setBrightness(value);
   }
 }
 
